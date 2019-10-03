@@ -1,0 +1,15 @@
+function Min-Free (A)
+  x <-- 0
+  loop
+    if x∉A then
+      return x
+    else 
+      x <-- x + 1
+
+function ∉(x, X)
+  for i <-- 1 to |X| do
+    if x = X[i] then
+      return false
+    return true
+
+算法复杂度为: O(n2)
