@@ -1,0 +1,76 @@
+改进一的解法虽然快了，但仍然有不足。首先，它会产生很多的重复元素，并且最终都会被丢弃了；其次，它需要扫描队列以保证队列中的元素有序。因此，入队操作从常数时间O(1)退化为线性时间O(|Q|).
+
+可以用3个队列进行改进。这3个队列表示为Q2，Q3，Q5，将3x加入Q3，将5x加入Q5，初始化为Q2={2}、Q3={3}、Q5={5}。每次从这3个队列的头部选择最小的一个元素x并取出，然后做下面的检查
+如果x是从Q2取出的，则将2x加入Q2，将3x加入Q3，将5x加入Q5
+如果x是从Q3取出的，则将3x加入Q3，将5x加入Q5，而不需要将3x加入Q2，因为2x已经在Q3了。
+如果x是从Q5取出的，则将5x加入Q5，不需要处理Q2，Q3.
+
+function getNumber(n){
+  if n = 1 then 
+    return 1
+  else 
+    Q2 <-- {2}
+    Q3 <-- {3}
+    Q5 <-- {5}
+    while n > 0 do
+      x <-- min(Head(Q2), Head(Q3), Head(Q5))
+      if x = Head(Q2) then
+        Dequeue(Q2)
+        Enqueue(Q2, 2x)
+        Enqueue(Q3, 3x)
+        Enqueue(Q5, 5x)
+      else if x = Head(Q3) then
+        Dequeue(Q3)
+        Enqueue(Q3, 3x)
+        Enqueue(Q5, 5x)
+      else
+        Dequeue(Q5)
+        Enqueue(Q5, 5x)
+    n <-- n - 1
+  return x
+}
+
+算法循环n次，每次循环都从3个队列中取出最小的一个元素，这一步需要常数时间。接着它根据取出元素所在的队列，产生1——3个新元素放入队列，这一步也是常数时间。因此整个算法的时间复杂度是O(n).
+
+C++：
+typedef unsigned long Integer
+Integer getNumber(int n) {
+  if (n=1) 
+    return 1;
+  queue<Integer>Q2, Q3, Q5;
+  Q2.push(2);
+  Q3.push(3);
+  Q5.push(5);
+  Integer x;
+  while(n-- > 1) {
+    x = min(Q2.front(), Q3.front(), Q5.front());
+    if(x==Q2.front()){
+      Q2.pop();
+      Q2.push(x*2);
+      Q3.push(x*3);
+      Q5.push(x*5);
+    } else if (x==Q3.front()){
+      Q3.pop();
+      Q3.push(x*3);
+      Q5.push(x*5);
+    } else {
+      Q5.pop();
+      Q5.push(x*5);
+    }
+  }
+  return x
+}
+
+用函数式的方式实现。定义一个take(x)，返回第n个仅有2、3或5这3个素因子构成的整数
+take(x) = f(n, {1}, {2}, {3}, {5})
+其中：
+f(n, X, Q2, Q3, Q5) = {
+  X: n = 1,
+  f(n-1, X ∪ {x}, Q2', Q3', Q5'): 其他
+}
+
+Q2', Q3', Q5' = {
+  {Q22,Q23,...} ∪ {2x}, Q3 ∪ {3x}, Q5 ∪ {5x}: x = Q21
+  Q2, {Q32, Q33, ...} ∪ {3x}, Q5 ∪ {5x}: x = Q31
+  Q2, Q3, {Q52, Q53, ...} ∪ {5x}: x = Q51
+}
