@@ -1,0 +1,27 @@
+从1开始逐一检查所有自然数，对于每个整数用除法把所有2，3，5的因子全去掉，如果结果为1，则找到一个丑数。
+
+function getNumber(n) {
+  x <-- 1
+  i <-- 0
+  loop
+    if Vaild?(x) then
+      i <-- i + 1
+      if i == n then
+        return x
+    x <-- x + 1
+}
+
+function Vaild?(x) {
+  while x mod 2 = 0 do
+    x <-- x/2
+  while x mod 3 = 0 do
+    x <-- x/3
+  while x mod 5 = 0 do
+    x <-- x/5
+  if x = 1 then
+    return true
+  else 
+    return false
+}
+
+取模运算和除法运算很耗时间
