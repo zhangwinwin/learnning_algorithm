@@ -1,0 +1,27 @@
+给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+
+示例 1:
+
+输入: "abcabcbb"
+输出: 3 
+解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+
+
+执行用时 :88 ms, 在所有 JavaScript 提交中击败了99.10%的用户
+内存消耗 :37.4 MB, 在所有 JavaScript 提交中击败了90.84%的用户
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLongestSubstring = function(s) {
+    let left=0, res=0, n=0;
+    for (let right = 0; right < s.length; right++){
+        n = s.slice(left,right).indexOf(s[right])
+        if (n == -1){
+            res = Math.max(res,right+1-left);
+        }else{
+            left += n+1;
+        }
+    }
+    return res;
+};
