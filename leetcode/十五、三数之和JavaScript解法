@@ -1,0 +1,50 @@
+给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组。
+
+注意：答案中不可以包含重复的三元组。
+
+例如, 给定数组 nums = [-1, 0, 1, 2, -1, -4]，
+
+满足要求的三元组集合为：
+[
+  [-1, 0, 1],
+  [-1, -1, 2]
+]
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+执行用时 :188 ms, 在所有 javascript 提交中击败了95.20%的用户
+内存消耗 :46.9 MB, 在所有 javascript 提交中击败了52.63%的用户
+var threeSum = function(nums) {
+    let result = [];
+    // 排序
+    nums.sort((a, b) => (a - b));
+    const len = nums.length;
+    // 排除少于3个元素的数组
+    if (nums == null || len < 3) return result;
+    for (let i=0; i<len; i++) {
+        if (nums[i] > 0) break; // 最左边的元素>0,退出循环
+        if (i>0 && nums[i] == nums[i-1]) continue; // 排重
+        
+        let first = i + 1;
+        let last = len - 1;
+        
+        while (first < last) {
+            let sum = nums[i] + nums[first] + nums[last];
+            if (sum == 0) {
+                result.push([nums[i], nums[first], nums[last]]);
+                // 排重，相等就跳过
+                while (first < last && nums[first] == nums[first+1]) first++;
+                // 排重，相等就跳过
+                while (first < last && nums[last] == nums[last-1]) last--;
+                first++;
+                last--;
+            }
+            if (sum < 0) first++; // 和太小了，向右移
+            if (sum > 0) last--; // 和太大了，向左移
+        }
+        
+    }
+    return result
+};
