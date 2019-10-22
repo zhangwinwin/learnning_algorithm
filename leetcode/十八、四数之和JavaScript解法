@@ -1,0 +1,57 @@
+给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。
+
+注意：
+
+答案中不可以包含重复的四元组。
+
+示例：
+
+给定数组 nums = [1, 0, -1, 0, -2, 2]，和 target = 0。
+
+满足要求的四元组集合为：
+[
+  [-1,  0, 0, 1],
+  [-2, -1, 1, 2],
+  [-2,  0, 0, 2]
+]
+
+解法：双指针，参照三数之和
+使用四个指针(i<j<c<d) 固定最小的i和j在左边，c=j+1， d=nums.length-1。
+移动两个指针包夹求解，保存nums[i]+nums[j]+nums[c]+nums[d] == target的结果。结果偏大，左移指针d。结果偏小，右移指针c。c与d相遇时，表示当前的a和b为最小值的解已经全部求出。j++进入下一轮循环，当j结束后，i++，进入i循环
+时间复杂度：排序O(nlogn) + 三循环O(n3) = O(n3)
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[][]}
+ */
+执行用时 :96 ms, 在所有 javascript 提交中击败了98.50%的用户
+内存消耗 :36.3 MB, 在所有 javascript 提交中击败了91.47%的用户
+var fourSum = function(nums, target) {
+    let len = nums.length;
+    let result = [];
+    if (nums == null || len < 4) return result;
+    nums.sort((a, b) => (a - b));
+    let c=0, d=0
+    for (let i=0; i<len; i++) {
+        if (i>0 && nums[i] == nums[i-1]) continue;
+        for (let j=i+1; j<len-1; j++) {
+            if (j>i+1 && nums[j] == nums[j-1]) continue;
+            c=j+1;
+            d=len-1;
+            while (c<d) {
+                if (nums[i] + nums[j] + nums[c] + nums[d] < target) {
+                    c++;
+                } else if (nums[i] + nums[j] + nums[c] + nums[d] > target) {
+                    d--;
+                } else {
+                    result.push([nums[i], nums[j], nums[c], nums[d]]);
+                    while(c<d && nums[c] == nums[c+1]) c++;
+                    while(c<d && nums[d] == nums[d-1]) d--;
+                    c++;
+                    d--;
+                }
+            }
+        }
+    }
+    return result
+};
