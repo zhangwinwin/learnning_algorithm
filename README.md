@@ -38,3 +38,4 @@
 ### [三十、串联所有单词的子串](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%B8%89%E5%8D%81%E3%80%81%E4%B8%B2%E8%81%94%E6%89%80%E6%9C%89%E5%8D%95%E8%AF%8D%E7%9A%84%E5%AD%90%E4%B8%B2JavaScript%E8%A7%A3%E6%B3%95.md)
 ### 三十一、下一个排序
 ### 三十二、最长有效括号
+### 三十三、搜索旋转排序数组
