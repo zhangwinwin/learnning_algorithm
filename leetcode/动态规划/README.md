@@ -74,3 +74,5 @@ function getClimbingWay(n, map) {
 }
 // 程序从i=3开始迭代，一直到i=n结束。每一次迭代，都会计算出多一级台阶的走法数量。迭代过程中只需保留两个临时变量a和b，分别代表了上一次和上上次迭代的结果。
 ```
+
+### (买卖股票的通用方案)[https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/solution/yi-ge-tong-yong-fang-fa-tuan-mie-6-dao-gu-piao-wen/]
