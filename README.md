@@ -30,10 +30,19 @@
 * 139、单词拆分  
 * 152、乘积最大子序列
 * 198、打家劫舍
+
+## 二分查找
+* 四、寻找两个有序数组的中位数
+* [二十九、两数相除](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%BA%8C%E5%8D%81%E4%B9%9D%E3%80%81%E4%B8%A4%E6%95%B0%E7%9B%B8%E9%99%A4JavaScript%E8%A7%A3%E6%B3%95.md)
+* 三十三、搜索旋转排序数组
+* 三十四、在排序数组中查找元素的第一个和最后一个
+* 六十九、x的平方根
+* 七十四、搜索二维矩阵
+* 81、搜索旋转排序数组 II
+
 ### 一、两数之和
-### 二、两数相加
+### 二、两数相加z
 ### 三、无重复字符的最长子串
-### 四、寻找两个有序数组的中位数
 ### 六、Z 字形变换
 ### 八、字符串转换为整数
 ### 九、回文数
@@ -51,12 +60,9 @@
 ### [二十三、合并k个排序列表](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%BA%8C%E5%8D%81%E4%B8%89%E3%80%81%E5%90%88%E5%B9%B6k%E4%B8%AA%E6%8E%92%E5%BA%8F%E5%88%97%E8%A1%A8JavaScript%E8%A7%A3%E6%B3%95.md)
 ### [二十四、两两交换链表中的节点](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%BA%8C%E5%8D%81%E5%9B%9B%E3%80%81%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9JavaScript%E8%A7%A3%E6%B3%95.md)
 ### [二十五、k个一组翻转链表](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%BA%8C%E5%8D%81%E4%BA%94%E3%80%81k%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8JavaScript%E8%A7%A3%E6%B3%95.md)
-### [二十九、两数相除](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%BA%8C%E5%8D%81%E4%B9%9D%E3%80%81%E4%B8%A4%E6%95%B0%E7%9B%B8%E9%99%A4JavaScript%E8%A7%A3%E6%B3%95.md)
 ### [三十、串联所有单词的子串](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%B8%89%E5%8D%81%E3%80%81%E4%B8%B2%E8%81%94%E6%89%80%E6%9C%89%E5%8D%95%E8%AF%8D%E7%9A%84%E5%AD%90%E4%B8%B2JavaScript%E8%A7%A3%E6%B3%95.md)
 ### 三十一、下一个排序
 ### 三十二、最长有效括号
-### 三十三、搜索旋转排序数组
-### 三十四、在排序数组中查找元素的第一个和最后一个
 ### 三十六、有效的数独
 ### 三十七、解数独
 ### 三十九、组合和解
@@ -77,8 +83,6 @@
 ### 六十一、旋转链表
 ### 六十六、加一
 ### 六十七、二进制求和
-### 六十九、x的平方根
 ### 七十一、简化路径
-### 七十四、搜索二维矩阵
 ### 七十五、颜色分类
 ### 七十七、组合
