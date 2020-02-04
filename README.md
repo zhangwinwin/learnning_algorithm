@@ -60,23 +60,30 @@
 * 378、二分查找
 * 436、寻找右区间
 
+## 字符串
+* 八、字符串转换为整数
+* 三、无重复字符的最长子串
+* 十二、整数转罗马数字--贪心算法
+* 十三、罗马数字转整数--散列表
+* 十四、最长公共前缀
+* 十七、电话号码的字母组合--回溯
+* 二十、有效的括号
+* 二十二、括号生成
+* 六十七、二进制求和
+* 四十三、通配符匹配
+* 五十八、螺旋矩阵二
+* 六十、第k个排列
+* 七十一、简化路径
+
 ### 一、两数之和
 ### 二、两数相加z
-### 三、无重复字符的最长子串
 ### 六、Z 字形变换
-### 八、字符串转换为整数
 ### 九、回文数
 ### 十一、盛最多水的容器--双指针法
-### 十二、整数转罗马数字--贪心算法
-### 十三、罗马数字转整数--散列表
-### 十四、最长公共前缀
 ### 十五、三数之和--双指针
 ### 十六、最接近的三数之和--双指针
-### 十七、电话号码的字母组合--回溯
 ### 十八、四数之和--三指针
 ### [十九、删除链表的倒数第N个节点](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E5%8D%81%E4%B9%9D%E3%80%81%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9JavaScript%E8%A7%A3%E6%B3%95.md)
-### [二十、有效的括号](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%BA%8C%E5%8D%81%E9%A2%98%E3%80%81%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7JavaScript%E8%A7%A3%E6%B3%95.md)
-### [二十二、括号生成](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%BA%8C%E5%8D%81%E4%BA%8C%E3%80%81%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90JavaScript%E8%A7%A3%E6%B3%95.md)
 ### [二十三、合并k个排序列表](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%BA%8C%E5%8D%81%E4%B8%89%E3%80%81%E5%90%88%E5%B9%B6k%E4%B8%AA%E6%8E%92%E5%BA%8F%E5%88%97%E8%A1%A8JavaScript%E8%A7%A3%E6%B3%95.md)
 ### [二十四、两两交换链表中的节点](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%BA%8C%E5%8D%81%E5%9B%9B%E3%80%81%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9JavaScript%E8%A7%A3%E6%B3%95.md)
 ### [二十五、k个一组翻转链表](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%BA%8C%E5%8D%81%E4%BA%94%E3%80%81k%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8JavaScript%E8%A7%A3%E6%B3%95.md)
@@ -89,7 +96,6 @@
 ### 四十、组合和解二
 ### 四十一、缺失的第一个整数
 ### 四十二、接雨水
-### 四十三、通配符匹配
 ### 四十五、跳跃游戏||
 ### 四十六、全排列
 ### 四十七、全排列2
@@ -98,11 +104,7 @@
 ### 五十五、跳跃游戏
 ### 五十六、合并区间
 ### 五十七、插入区间
-### 五十八、螺旋矩阵二
-### 六十、第k个排列
 ### 六十一、旋转链表
 ### 六十六、加一
-### 六十七、二进制求和
-### 七十一、简化路径
 ### 七十五、颜色分类
 ### 七十七、组合
