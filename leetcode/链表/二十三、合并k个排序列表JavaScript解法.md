@@ -55,3 +55,40 @@ function merge2Lists (l1, l2) {
     return head.next;
 }
 ```
+
+```
+// 自上而下递归
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode[]} lists
+ * @return {ListNode}
+ */
+var mergeKLists = function(lists) {
+    let mergeTwo = (l1, l2) => {
+        if (!l1) return l2;
+        if (!l2) return l1;
+
+        if (l1.val > l2.val) {
+            l2.next = mergeTwo(l1, l2.next);
+            return l2;
+        } else {
+            l1.next = mergeTwo(l2, l1.next);
+            return l1;
+        }
+    }
+    let mergeLists = (lists, start, end) => {
+        if (end - start < 0) return null;
+        if (end - start === 0) return lists[end];
+
+        let mid = ((start + end) / 2) >>> 0;
+        return mergeTwo(mergeLists(lists, start, mid), mergeLists(lists, mid+1, end))
+    }
+    return mergeLists(lists, 0, lists.length-1)
+}
+```
