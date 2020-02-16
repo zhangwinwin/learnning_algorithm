@@ -82,6 +82,7 @@
 * [二十四、两两交换链表中的节点](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%BA%8C%E5%8D%81%E5%9B%9B%E3%80%81%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9JavaScript%E8%A7%A3%E6%B3%95.md)
 * [二十五、k个一组翻转链表](https://github.com/zhangwinwin/learnning_algorithm/blob/master/leetcode/%E4%BA%8C%E5%8D%81%E4%BA%94%E3%80%81k%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8JavaScript%E8%A7%A3%E6%B3%95.md)
 * 六十一、旋转链表
+* 206、反转链表
 
 ### 一、两数之和
 ### 六、Z 字形变换
